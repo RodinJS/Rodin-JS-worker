@@ -39,6 +39,7 @@ app.use(flash());
  */
 app.get('/webhooks/gogs', apiController.get);
 app.post('/webhooks/gogs', apiController.post);
+app.all('*', (req, res, next) => res.send({"Gago say's": "Workers are working..."}));
 
 /**
  * Start Express server.
