@@ -1,16 +1,23 @@
 'use strict';
-
+const config = require('../config');
 const request = require('request');
 const git = require("nodegit");
 
 module.exports.get = (req, res, next) => {
-  res.status(200).send({test: "test"});
+	res.status(200).send({info: "Working..."});
 };
 
 module.exports.post = (req, res, next) => {
-  console.log(req.headers);
-  console.log(req.body);
-  console.log(req.params);
-  console.log(req.query);
-  res.status(200).send({headers: req.headers, body: req.body});
+	console.log({
+		headers: req.headers,
+		body: req.body,
+		params: req.params,
+		query: req.query
+	});
+
+	if(req.body.secret === config.gogs_secret) {
+		res.status(200).send({secret: true, headers: req.headers, body: req.body});
+	} else {
+		res.status(400).send({secret: false, headers: req.headers, body: req.body});
+	}
 };
