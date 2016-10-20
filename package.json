@@ -1,0 +1,52 @@
+{
+  "name": "rodin-js-worker",
+  "version": "0.0.1",
+  "description": "webhook server for gogs",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodinJS/Rodin-JS-worker.git"
+  },
+  "keywords": [
+    "webhook",
+    "rodinjs",
+    "gogs"
+  ],
+  "author": "Grigor Khachatryan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RodinJS/Rodin-JS-worker/issues"
+  },
+  "homepage": "https://github.com/RodinJS/Rodin-JS-worker#readme",
+  "dependencies": {
+    "bluebird": "^3.1.4",
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.3",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.1",
+    "cors": "^2.7.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express-flash": "0.0.2",
+    "express-status-monitor": "^0.1.5",
+    "express-validator": "^2.20.10",
+    "http-status": "^0.2.0",
+    "morgan": "^1.7.0",
+    "nodegit": "^0.16.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {},
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
