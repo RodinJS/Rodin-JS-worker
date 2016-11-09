@@ -17,6 +17,7 @@ module.exports.post = (req, res, next) => {
 
 	if(req.body.secret === config.gogs_secret) {
 		let tag = req.body.commits.message;
+		console.log(tag);
 		res.status(200).send({secret: true, headers: req.headers, body: req.body, tag: tag});
 	} else {
 		res.status(400).send({secret: false, headers: req.headers, body: req.body});
