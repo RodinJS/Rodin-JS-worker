@@ -2,7 +2,6 @@
 const config = require('../config');
 const request = require('request');
 const exec = require('child_process').exec;
-const git = require("nodegit");
 
 module.exports.get = (req, res, next) => {
 	res.status(200).send({info: "Working..."});
