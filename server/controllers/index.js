@@ -17,7 +17,7 @@ module.exports.post = (req, res, next) => {
 		let tag = req.body.commits[0].message;
 		tag = tag.replace(/(?:\r\n|\r|\n)/g, '');
 
-		exec(`cd /var/www/cdn/ && mkdir ${tag} && cd ${tag} && git init && git pull http://git.rodin.space/rodin/Rodin-JS.git`, (error, stdout, stderr) => {
+		exec(`cd /var/www/cdn/ && mkdir ${tag} && cd ${tag} && git init && git pull http://git.rodin.io/rodin/Rodin-JS.git`, (error, stdout, stderr) => {
 			if (error) {
 				console.error(`exec error: ${error}`);
 				res.status(400).send({error: error, secret: true, headers: req.headers, body: req.body});
