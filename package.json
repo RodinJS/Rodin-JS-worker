@@ -36,7 +36,7 @@
     "express-validator": "^2.21.0",
     "http-status": "^0.2.0",
     "morgan": "^1.7.0",
-    "request": "^2.78.0"
+    "request": "^2.79.0"
   },
   "devDependencies": {},
   "babel": {
